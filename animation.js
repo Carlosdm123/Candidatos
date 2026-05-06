@@ -80,6 +80,8 @@ logo.style.left="100px";
 
 setTimeout(()=>{
 
+document.getElementById("logo").style.opacity="0";
+
 candidateImg.style.opacity="1";
 
 },350);
