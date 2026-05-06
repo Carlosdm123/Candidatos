@@ -1,11 +1,55 @@
 let bannerMaskCreated = false;
 
+function createBannerMask(){
+
+if(bannerMaskCreated) return;
+
+const banner = document.getElementById("banner");
+
+const bannerMask = document.createElement("div");
+
+bannerMask.style.position = "absolute";
+bannerMask.style.left = "0px";
+bannerMask.style.bottom = "83px";
+bannerMask.style.width = "1920px";
+bannerMask.style.height = "600px";
+bannerMask.style.overflow = "hidden";
+
+banner.parentNode.insertBefore(bannerMask, banner);
+bannerMask.appendChild(banner);
+
+banner.style.position = "absolute";
+banner.style.bottom = "165px";
+banner.style.left = "0";
+
+bannerMaskCreated = true;
+
+}
+
+function resetBanner(){
+
+createBannerMask();
+
+const banner = document.getElementById("banner");
+const mask1 = document.getElementById("mask1");
+const mask2 = document.getElementById("mask2");
+
+const logoBox = document.getElementById("logoBox");
+
+const logo = document.getElementById("logo");
+const candidateImg = document.getElementById("candidateImg");
+
+banner.style.transition="none";
+mask1.style.transition="none";
+mask2.style.transition="none";
+logoBox.style.transition="none";
+
 banner.style.transform="translateY(0px)";
 banner.style.opacity="1";
 
-logo.style.left="50vw";
+logoBox.style.left="50vw";
 
-logoImg.style.opacity="1";
+logo.style.opacity="1";
 candidateImg.style.opacity="0";
 
 mask1.style.clipPath="inset(0 0 0 100%)";
@@ -21,8 +65,10 @@ resetBanner();
 
 const mask1 = document.getElementById("mask1");
 const mask2 = document.getElementById("mask2");
-const logo = document.getElementById("logoBox");
-const logoImg = document.getElementById("logo");
+
+const logoBox = document.getElementById("logoBox");
+
+const logo = document.getElementById("logo");
 const candidateImg = document.getElementById("candidateImg");
 
 setTimeout(()=>{
@@ -34,22 +80,24 @@ mask1.style.clipPath="inset(0 0 0 0)";
 
 setTimeout(()=>{
 
+mask1.style.transition="clip-path 0.6s ease";
 mask1.style.clipPath="inset(0 1720px 0 0)";
 
-logo.style.transition="left 0.6s ease";
-logo.style.left="100px";
+logoBox.style.transition="left 0.6s ease";
+logoBox.style.left="100px";
 
 setTimeout(()=>{
 
-logoImg.style.opacity="0";
+logo.style.opacity="0";
 candidateImg.style.opacity="1";
 
-},250);
+},300);
 
 },1030);
 
 setTimeout(()=>{
 
+mask2.style.transition="clip-path 0.6s ease";
 mask2.style.zIndex="-1";
 mask2.style.clipPath="inset(0 0 0 0)";
 
