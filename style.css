@@ -1,4 +1,23 @@
 @font-face{
+font-family:"LFT Etica";
+src:url("../fonts/LFTEticaSb.woff2") format("woff2"),
+    url("../fonts/LFTEticaSb.woff") format("woff");
+font-weight:600;
+}
+
+body{
+margin:0;
+overflow:hidden;
+background:transparent;
+font-family:"LFT Etica",sans-serif;
+}
+
+#banner{
+position:absolute;
+bottom:230px;
+left:0;
+width:1920px;
+}
 
 #box1,
 #box2{
@@ -29,27 +48,27 @@ position:absolute;
 top:50%;
 left:50vw;
 transform:translate(-50%,-50%);
-width:120px;
-height:120px;
 }
 
-#logo{
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-height:70px;
-transition:opacity 0.3s ease;
-}
-
+#logo,
 #candidateImg{
 position:absolute;
 top:50%;
 left:50%;
 transform:translate(-50%,-50%);
-height:120px;
+height:70px;
+}
+
+#logo{
+opacity:1;
+transition:opacity 0.25s ease;
+z-index:2;
+}
+
+#candidateImg{
 opacity:0;
-transition:opacity 0.3s ease;
+transition:opacity 0.25s ease;
+z-index:3;
 pointer-events:none;
 }
 
