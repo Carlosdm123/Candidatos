@@ -48,11 +48,17 @@ position:absolute;
 top:50%;
 left:50vw;
 transform:translate(-50%,-50%);
+width:200px;
+height:90px;
+overflow:hidden;
 }
 
 #logo{
 height:70px;
-position:relative;
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
 z-index:1;
 }
 
@@ -61,7 +67,9 @@ position:absolute;
 top:50%;
 left:50%;
 transform:translate(-50%,-50%);
-height:70px;
+width:200px;
+height:90px;
+object-fit:cover;
 opacity:0;
 z-index:2;
 pointer-events:none;
