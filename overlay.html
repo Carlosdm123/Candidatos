@@ -1,4 +1,53 @@
 <!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.ably.com/lib/ably.min-1.js"></script>
+
+</head>
+
+<body>
+
+<div id="banner" style="opacity:0;">
+
+<div id="box1">
+<div id="mask1">
+
+<img src="assets/caja1.png" class="bg">
+
+<div id="logoBox">
+<img src="assets/logo.png" id="logo">
+<img src="" id="candidateImg">
+</div>
+
+</div>
+</div>
+
+<div id="box2">
+<div id="mask2">
+
+<img src="assets/caja2.png" class="bg">
+
+<div id="textContainer">
+<div id="bannerText" style="text-transform:uppercase;"></div>
+</div>
+
+</div>
+</div>
+
+</div>
+
+<script src="animation.js"></script>
+
+<script>
+
+const ably = new Ably.Realtime("bOKecA.nN4Mxg:fKOSQx66tttgBhzrHuPP0FDYQnvKB8yniR-7J4BY_uo");
+
+const channel = ably.channels.get("candidatos-overlay");
+
 let visible=false;
 let changing=false;
 
@@ -24,6 +73,7 @@ const text=data.text;
 const candidate=data.candidate;
 
 const candidateImg=document.getElementById("candidateImg");
+
 candidateImg.src="assets/"+candidate;
 
 if(visible){
