@@ -18,9 +18,10 @@
 
 <img src="assets/caja1.png" class="bg">
 
+<img src="" id="candidateImg">
+
 <div id="logoBox">
 <img src="assets/logo.png" id="logo">
-<img src="" id="candidateImg">
 </div>
 
 </div>
@@ -60,11 +61,6 @@ banner.style.opacity="0";
 }
 
 hideImmediately();
-
-
-// =============================
-// MENSAJES DEL BANNER
-// =============================
 
 channel.subscribe("banner",(message)=>{
 
