@@ -5,10 +5,14 @@ src:url("../fonts/LFTEticaSb.woff2") format("woff2"),
 font-weight:600;
 }
 
+html,
 body{
 margin:0;
+padding:0;
 overflow:hidden;
 background:transparent;
+width:1920px;
+height:1080px;
 font-family:"LFT Etica",sans-serif;
 }
 
@@ -115,7 +119,7 @@ text-transform:uppercase;
 /* MOSCA ANALISIS */
 
 #moscaOverlay{
-position:absolute;
+position:fixed;
 top:0;
 left:0;
 
@@ -123,9 +127,13 @@ width:1920px;
 height:1080px;
 
 border:none;
+outline:none;
+
 background:transparent;
 
-z-index:9999;
+z-index:99999;
 
 pointer-events:none;
+
+display:block;
 }
