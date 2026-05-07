@@ -80,7 +80,7 @@ setTimeout(()=>{
 
 mask1.style.clipPath="inset(0 1720px 0 0)";
 
-logo.style.transition="left 0.6s ease";
+logo.style.transition="left 0.4s ease";
 logo.style.left="100px";
 
 setTimeout(()=>{
