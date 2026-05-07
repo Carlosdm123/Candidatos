@@ -58,7 +58,7 @@ overflow:visible;
 #logo{
 height:82px;
 position:relative;
-top:0px;
+top:-2px;
 z-index:3;
 opacity:1;
 transition:opacity 0.25s ease;
