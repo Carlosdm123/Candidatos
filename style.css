@@ -17,6 +17,7 @@ position:absolute;
 bottom:230px;
 left:0;
 width:1920px;
+z-index:10;
 }
 
 #box1,
@@ -114,7 +115,43 @@ word-break:keep-all;
 text-transform:uppercase;
 }
 
-/* MOSCA ANALISIS */
+/* OVERLAYS */
+
+#bannerOverlay{
+position:absolute;
+top:0;
+left:0;
+
+width:1920px;
+height:1080px;
+
+border:none;
+outline:none;
+background:transparent;
+
+z-index:99997;
+
+pointer-events:none;
+display:block;
+}
+
+#rolesOverlay{
+position:absolute;
+top:0;
+left:0;
+
+width:1920px;
+height:1080px;
+
+border:none;
+outline:none;
+background:transparent;
+
+z-index:99998;
+
+pointer-events:none;
+display:block;
+}
 
 #moscaOverlay{
 position:absolute;
@@ -126,7 +163,6 @@ height:1080px;
 
 border:none;
 outline:none;
-
 background:transparent;
 
 z-index:99999;
