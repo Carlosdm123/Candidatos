@@ -34,6 +34,7 @@ const banner = document.getElementById("banner");
 const mask1 = document.getElementById("mask1");
 const mask2 = document.getElementById("mask2");
 const logo  = document.getElementById("logoBox");
+
 const candidateImg = document.getElementById("candidateImg");
 
 banner.style.transition="none";
@@ -46,6 +47,9 @@ banner.style.opacity="1";
 
 logo.style.left="50vw";
 
+document.getElementById("logo").style.opacity="1";
+
+candidateImg.style.display="block";
 candidateImg.style.opacity="0";
 
 mask1.style.clipPath="inset(0 0 0 100%)";
@@ -62,6 +66,7 @@ resetBanner();
 const mask1 = document.getElementById("mask1");
 const mask2 = document.getElementById("mask2");
 const logo  = document.getElementById("logoBox");
+
 const candidateImg = document.getElementById("candidateImg");
 
 setTimeout(()=>{
@@ -80,9 +85,9 @@ logo.style.left="100px";
 
 setTimeout(()=>{
 
-document.getElementById("logo").style.opacity="0";
-
 candidateImg.style.opacity="1";
+
+document.getElementById("logo").style.opacity="0";
 
 },350);
 
