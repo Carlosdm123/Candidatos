@@ -60,6 +60,8 @@ height:82px;
 position:relative;
 top:5px;
 z-index:3;
+opacity:1;
+transition:opacity 0.25s ease;
 }
 
 #candidateImg{
@@ -79,7 +81,7 @@ z-index:1;
 
 pointer-events:none;
 
-transition:opacity 0.2s ease;
+transition:opacity 0.25s ease;
 }
 
 #textContainer{
